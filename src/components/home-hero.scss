@@ -1,0 +1,195 @@
+@import "../index.scss";
+.hero {
+  background-image: url("../../public/assets/hero-bg.png");
+  //   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .home-hero {
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 100%;
+    min-height: 859px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .hero-content {
+      margin: 150px 0;
+      flex: 1 1 50%;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1520px;
+      position: relative;
+      // z-index: 22;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // gap: 100px;
+      .hero-right {
+        display: flex;
+        flex: 1;
+        align-items: center;
+
+        color: $black;
+        width: 759px;
+        height: 570px;
+        background-color: #fff;
+        .hero-right-content {
+          display: flex;
+          transform: translateX(-100px);
+        }
+        .hero-right-text {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          gap: 12px;
+          color: $paragraph-color;
+          h3 {
+            color: $black;
+            font-weight: normal;
+          }
+          span {
+            color: $primary-color;
+          }
+
+          .hero-right-text-link {
+            white-space: nowrap;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            a {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+
+        p {
+          font-size: 17px;
+        }
+        .arrow-container {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+    .hero-bottom {
+      width: 100%;
+      max-width: 1520px;
+      height: 80px;
+      background-color: $primary-color;
+      bottom: 0;
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .hero-bottom-content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: #fff;
+        gap: 8px;
+        transform: translateY(-24px);
+
+        h3 {
+          font-weight: 400;
+          position: relative;
+        }
+        .hero-bottom-icon {
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 50%;
+          transition: all 0.5s ease;
+        }
+        .hero-bottom-arrow-box {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+        }
+        &:hover {
+          .hero-bottom-icon {
+            transform: rotateY(180deg);
+          }
+          .hero-bottom-arrow-box {
+            img {
+              transition: all 0.5s ease;
+              transform: translateX(20px);
+            }
+          }
+        }
+        &:not(:hover) {
+          img {
+            transition: all 0.5s ease;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1306px) {
+  .home-hero {
+    .hero-content {
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 180px;
+      .hero-left {
+        align-items: center;
+        p {
+          text-align: center;
+        }
+        .section-title {
+          text-align: center;
+        }
+      }
+      .hero-right {
+        padding: 50px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .hero {
+    .home-hero {
+      .hero-content {
+        margin: 0;
+        .hero-right {
+          display: none;
+        }
+        .hero-left {
+          .section-title {
+            font-size: 40px;
+          }
+          .arrow-container {
+            display: none;
+          }
+        }
+      }
+      .hero-bottom {
+        display: none;
+      }
+    }
+  }
+}

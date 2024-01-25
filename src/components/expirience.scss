@@ -1,0 +1,68 @@
+@import "../index.scss";
+img {
+  max-width: 100%;
+}
+.expirience {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+
+    right: 0;
+    height: 1642px;
+
+    width: 70%;
+    background-color: $primary-color;
+    z-index: -1;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .expirience-container {
+    margin-top: 100px;
+    max-width: 1520px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    @media (min-width: 768px) {
+      width: 100%;
+      flex-direction: row;
+      gap: 150px;
+      padding: 30px;
+    }
+
+    .expirience-text {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+    }
+    .expirience-image-container {
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}

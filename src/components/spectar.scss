@@ -1,0 +1,41 @@
+@import "../index.scss";
+.spectar {
+  display: flex;
+  justify-content: center;
+}
+.spectar-container {
+  color: $paragraph-color;
+  padding: 100px 0;
+  max-width: 1520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  h2 {
+    color: $black;
+
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .spectar-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .spectar-container {
+    flex-direction: row;
+    gap: 130px;
+    h2 {
+      text-align: start;
+    }
+    .spectar-text {
+      align-items: start;
+    }
+  }
+}
